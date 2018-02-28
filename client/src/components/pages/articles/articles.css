@@ -1,0 +1,18 @@
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+
+.panel-primary{
+    border-color: black;
+}
+
+/* .jumbotron{
+    background-color: black;
+}
+.jumbotron>h1{
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+
+} */

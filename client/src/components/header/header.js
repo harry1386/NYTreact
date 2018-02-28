@@ -1,6 +1,6 @@
 import React from "react";
 
-class Jumbotron extends React.Component {
+class Header extends React.Component {
     render() {
       return (
         <div className="jumbotron">

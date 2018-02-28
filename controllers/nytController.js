@@ -1,15 +1,8 @@
 const articlesModel = require('../models/article.js');
 
-/**
- * articlesController.js
- *
- * @description :: Server-side logic for managing articles.
- */
+
 module.exports = {
 
-    /**
-     * articlesController.list()
-     */
     list: function (req, res) {
         articlesModel.find(function (err, articless) {
             if (err) {
@@ -22,9 +15,7 @@ module.exports = {
         });
     },
 
-    /**
-     * articlesController.show()
-     */
+ 
     show: function (req, res) {
         var id = req.params.id;
         articlesModel.findOne({_id: id}, function (err, articles) {
@@ -43,9 +34,7 @@ module.exports = {
         });
     },
 
-    /**
-     * articlesController.create()
-     */
+  
     create: function (req, res) {
         var articles = new articlesModel({
 			title : req.body.title,
@@ -65,9 +54,7 @@ module.exports = {
         });
     },
 
-    /**
-     * articlesController.update()
-     */
+  
     update: function (req, res) {
         var id = req.params.id;
         articlesModel.findOne({_id: id}, function (err, articles) {
@@ -100,9 +87,7 @@ module.exports = {
         });
     },
 
-    /**
-     * articlesController.remove()
-     */
+   
     remove: function (req, res) {
         var id = req.params.id;
         articlesModel.findByIdAndRemove(id, function (err, articles) {

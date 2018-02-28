@@ -1,30 +1,20 @@
 var express = require('express');
 var router = express.Router();
-var articlesController = require('../../controllers/articlesController.js');
+var nytController = require('../../controllers/nytController.js');
 
-/*
- * GET
- */
-router.get('/', articlesController.list);
+// get
+router.get('/', nytController.list);
 
-/*
- * GET
- */
-router.get('/:id', articlesController.show);
+// get to display
+router.get('/:id', nytController.show);
 
-/*
- * POST
- */
-router.post('/', articlesController.create);
+//something new
+router.post('/', nytController.create);
 
-/*
- * PUT
- */
-router.put('/:id', articlesController.update);
+//not something blue
+router.put('/:id', nytController.update);
 
-/*
- * DELETE
- */
-router.delete('/:id', articlesController.remove);
+//delete something old
+router.delete('/:id', nytController.remove);
 
 module.exports = router;
